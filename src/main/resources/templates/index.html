@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HTMX Button Example</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+<h1>Grafana Test Suite</h1>
+
+<button hx-get="/hello" hx-target="#response" hx-swap="innerHTML">
+    Say Hello
+</button>
+
+<button hx-get="/flaky" hx-target="#response" hx-swap="innerHTML">
+    Run Flaky
+</button>
+
+<button hx-get="/timer" hx-target="#response" hx-swap="innerHTML">
+    Run Timer
+</button>
+
+<div id="response">
+    <!-- Initial content can go here -->
+</div>
+</body>
+</html>
